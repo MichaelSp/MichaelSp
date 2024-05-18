@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
   "enabled": true,
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
@@ -9,6 +10,9 @@
   "helmv3": {
     "fileMatch": ["charts/.+/Chart\\.yaml$"]
   },
+  "postUpdateOptions": [
+    "helmUpdateSubChartArchives"
+  ],
   "packageRules": [
     // Setup datasources
     {
