@@ -1,6 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
+  "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
+  "minimumReleaseAge": "3 days",
   "enabled": true,
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
