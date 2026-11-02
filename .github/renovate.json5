@@ -15,6 +15,7 @@
     "fileMatch": ["charts/.+/Chart\\.yaml$"]
   },
   "postUpdateOptions": [
+    "gomodTidy",
     "helmUpdateSubChartArchives"
   ],
   "packageRules": [
